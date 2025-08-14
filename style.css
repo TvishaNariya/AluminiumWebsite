@@ -1,0 +1,196 @@
+:root {
+  --primary-color: #1B263B;   /* Deep Navy */
+  --secondary-color: #7D7D7D; /* Pewter Gray */
+  --accent-color: #B87333;    /* Copper */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: var(--primary-color) !important;
+}
+
+.navbar .nav-link {
+  color: var(--secondary-color) !important;
+}
+
+.navbar .nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: #a65e26; /* darker copper */
+  border-color: #a65e26;
+}
+
+.card {
+  border: none;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: whitesmoke;
+}
+
+/* hero */
+.hero {
+  height: 100vh;
+  background: url('image/pexels-kateryna-babaieva-1423213-3361235.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 38, 59, 0.5); /* dark overlay for better contrast */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Quote Button */
+#getQuoteBtn {
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+#getQuoteBtn:hover {
+  background-color: whitesmoke;
+  color: var(--accent-color);
+  border-color: whitesmoke;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/*about us image*/
+.about-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 6; /* Rectangle Banner Shape */
+  overflow: hidden;
+}
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image proportional */
+}
+
+/*contact us*/
+#contact .card {
+  background: var(--primary-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background:var(--primary-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.social-icon:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* respnsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh; /* Reduce banner height */
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem; /* Smaller heading */
+  }
+
+  .hero p {
+    font-size: 1rem; /* Smaller subheading */
+  }
+
+  #getQuoteBtn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .about-image-wrapper {
+    height: 170px; /* Smaller banner height for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh; /* Even smaller for mobile */
+    padding: 30px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  #getQuoteBtn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .about-image-wrapper {
+    height: 15  0px; /* Smaller banner height for mobile */
+  }
+}
