@@ -44,8 +44,20 @@ footer {
 }
 
 /* hero */
-.display-4{
-  font-size: -webkit-xxx-large;
+.display-4 {
+  font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-4 {
+    font-size: 1.5rem;
+  }
 }
 
 .hero {
@@ -344,3 +356,40 @@ footer {
   font-size: 14px;
 }
 
+/* Global mobile font adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.3rem; }
+  h4 { font-size: 1.15rem; }
+  h6 { font-size: 0.95rem; }
+
+  p, li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.15rem; }
+
+  p, li {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card,
+  .quality-card {
+    padding: 20px;
+  }
+}
