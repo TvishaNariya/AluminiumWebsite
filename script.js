@@ -1,7 +1,7 @@
 // Store company name in one place
-const companyName = "Kalindi Enterprise Pvt. Ltd.";
+const companyName = "Kalindi Enterprise";
 
-// Set company name everywhere with class 'company-name'
+//Set company name everywhere with class 'company-name'
 document.querySelectorAll(".company-name").forEach(el => {
   el.textContent = companyName;
 });
